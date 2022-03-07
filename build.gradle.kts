@@ -31,12 +31,6 @@ dependencies {
 
 }
 
-//configurations {
-//    all {
-//        exclude(group = "org.yaml", module = "snakeyaml")
-//    }
-//}
-
 application {
     mainClass.set("dev.kastro.ApplicationKt")
 }

@@ -5,6 +5,7 @@ import io.github.serpro69.kfaker.Faker
 import jakarta.inject.Singleton
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import kotlin.Int
 
 @Singleton
 class InMemoryStore(
@@ -14,6 +15,11 @@ class InMemoryStore(
     private val logger: Logger = LoggerFactory.getLogger(this::class.java)
 
     init {
+        initializeWith(10)
+    }
+
+    fun initializeWith(numberOfEntries: Int) {
+        symbols.clear()
         for (i in 1..10) {
             addNewSymbol()
         }
