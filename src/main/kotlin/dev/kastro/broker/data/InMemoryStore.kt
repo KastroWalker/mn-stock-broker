@@ -20,7 +20,7 @@ class InMemoryStore(
 
     fun initializeWith(numberOfEntries: Int) {
         symbols.clear()
-        for (i in 1..10) {
+        for (i in 1..numberOfEntries) {
             addNewSymbol()
         }
     }
